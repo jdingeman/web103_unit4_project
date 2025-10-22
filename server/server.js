@@ -2,6 +2,9 @@ import express from 'express'
 import path from 'path'
 import favicon from 'serve-favicon'
 import dotenv from 'dotenv'
+import buildsRouter from './routes/builds.js'
+import partsRouter from './routes/parts.js'
+import cors from 'cors'
 
 // import the router from your routes file
 
@@ -11,6 +14,8 @@ dotenv.config()
 const PORT = process.env.PORT || 3000
 
 const app = express()
+
+app.use(cors())
 
 app.use(express.json())
 
@@ -23,6 +28,8 @@ else if (process.env.NODE_ENV === 'production') {
 }
 
 // specify the api path for the server to use
+app.use('/api/builds', buildsRouter)
+app.use('/api/parts', partsRouter)
 
 
 if (process.env.NODE_ENV === 'production') {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import BuildsAPI from '../services/BuildsAPI'
-import '../App.css'
+import '../css/ViewBuilds.css'
 import Build from '../components/Build'
 import { Link } from 'react-router-dom'
 
@@ -20,12 +20,12 @@ const ViewBuilds = () => {
     
     return (
         <div>
-            <main>
+            <main className="builds-list">
                 {
                     builds && builds.length > 0 ? builds.map((build, index) => 
                         <Link
-                            key={build.id}
-                            to={`/custombuilds/${build.id}`}
+                            key={build.build_id}
+                            to={`/custombuilds/${build.build_id}`}
                             style={{ textDecoration: 'none', color: 'inherit' }}
                         >
                             <Build

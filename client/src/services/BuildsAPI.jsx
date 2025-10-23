@@ -28,7 +28,7 @@ const createBuild = async (buildData) => {
 
     const response = await fetch(`${API_URL}`, options)
     if (!response.ok) throw new Error('Failed to create build');
-    window.location('/')
+    window.location = '/'
 }
 
 const updateBuild = async (id, buildData) => {
@@ -40,17 +40,17 @@ const updateBuild = async (id, buildData) => {
 
     const response = await fetch(`${API_URL}/${id}`, options)
     if (!response.ok) throw new Error(`Failed to update build ${id}`);
-    window.location('/')
+    window.location = '/'
 }
 
 const deleteBuild = async (id) => {
     const options = {
-        method: 'PATCH',
+        method: 'DELETE',
     }
 
     const response = await fetch(`${API_URL}/${id}`, options)
     if (!response.ok) throw new Error(`Failed to delete build ${id}`);
-    window.location('/')
+    window.location = '/'
 }
 
 export default {

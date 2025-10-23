@@ -1,5 +1,15 @@
 const API_URL = '/api/parts'
 
+const getPartsByTable = async (tableName) => {
+    const response = await fetch(`${API_URL}/${tableName}`, {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json'}
+    })
+
+    if (!response.ok) throw new Error(`Failed to fetch table ${tableName}`);
+    return await response.json()
+}
+
 const getAllCases = async () => {
     const response = await fetch(`${API_URL}/cases`, {
         method: 'GET',
@@ -23,5 +33,6 @@ const getCaseById = async (id) => {
 
 export default {
     getAllCases,
-    getCaseById
+    getCaseById,
+    getPartsByTable
 }

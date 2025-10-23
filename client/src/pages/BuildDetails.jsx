@@ -17,6 +17,15 @@ const BuildDetails = () => {
         fetchBuild()
     }, [id])
 
+    const handleDelete = async () => {
+        console.log(id)
+        try {
+            await BuildsAPI.deleteBuild(id)
+        } catch (error) {
+            console.error("Error deleting build:", error)
+        }
+    }
+
     return(
         <div className="build-item">
             <div className="build-left">
@@ -28,7 +37,7 @@ const BuildDetails = () => {
 
                 <div className="build-actions">
                     <button className="edit-btn">Edit</button>
-                    <button className="delete-btn">Delete</button>
+                    <button className="delete-btn" onClick={handleDelete}>Delete</button>
                 </div>
             </div>
 

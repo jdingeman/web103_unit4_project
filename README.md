@@ -4,7 +4,7 @@ Submitted by: **Justin Dingeman**
 
 About this web app: **A PC parts picker application that calculates total price of a custom PC**
 
-Time spent: **11** hours
+Time spent: **17** hours
 
 ## Required Features
 
@@ -15,16 +15,16 @@ The following **required** functionality is completed:
 - [x] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomItem` table.**
   - [x]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
   - [x]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
-- [ ] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
-- [ ] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
+- [x] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
+- [x] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
 - [ ] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
-- [ ] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected *OR* The app displays the total price of all features.**
-- [ ] **The visual interface changes in response to at least one customizable feature.**
-- [ ] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
+- [x] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected *OR* The app displays the total price of all features.**
+- [x] **The visual interface changes in response to at least one customizable feature.**
+- [x] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
 - [ ] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database.**
 - [x] **Users can view a list of all submitted `CustomItem`s.**
 - [ ] **Users can edit a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
-- [ ] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [x] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
 - [ ] **Users can update or delete `CustomItem`s that have been created from the detail page.**
 
 
@@ -40,7 +40,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='pc-builder-demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='pc-builder-demo-sub2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap
@@ -59,7 +59,10 @@ GIF created with LICEcap
   - Challenges
     - The queries became a bit more complex than I expected and it was somewhat difficult to keep track of how things were being pulled from the database, but I evnetually understood.
     - I had troubles dealing with the props vs destructured object being passed into the component as parameters, and I am still not entirely clear on it. 
-
+- Submission 2
+  - Did not have time to implement the EditBuild 
+  - The CreateBuild page alone was so much and so complex
+  - Did not implement functionality to invalidate impossible combinations
 ## License
 
 Copyright 2025 Justin Dingeman
